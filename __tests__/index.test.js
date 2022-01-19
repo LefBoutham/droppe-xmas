@@ -22,8 +22,16 @@ describe("Home", () => {
   it("renders wishlists", () => {
     render(<Home />);
 
-    const text = screen.getByText("Monica's wishlist");
+    const monica = screen.getByText("Monica's wishlist");
+    const rachel = screen.getByText("Rachel's wishlist");
+    const joey = screen.getByText("Joey's wishlist");
+    const chandler = screen.getByText("Chandler's wishlist");
+    const ross = screen.getByText("Ross's wishlist");
 
-    expect(text).toBeInTheDocument();
+    expect(monica).toBeInTheDocument();
+    expect(rachel).toBeInTheDocument();
+    expect(joey).toBeInTheDocument();
+    expect(chandler).toBeInTheDocument();
+    expect(ross).toBeInTheDocument();
   });
 });
