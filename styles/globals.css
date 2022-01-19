@@ -99,3 +99,8 @@ footer {
   gap: 15px;
   width: 100%;
 }
+.product-to-approve {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

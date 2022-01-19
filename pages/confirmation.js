@@ -4,19 +4,15 @@ import { Confirmation } from "../src/components/templates/Confirmation";
 import { useStore } from "../src/store";
 
 const ConfirmationPage = () => {
-  const router = useRouter();
-  const carts = useStore((state) => state.carts);
-
-  useEffect(() => {
-    if (carts.length == 0) {
-      router.push("/");
-    }
-  }, [carts]);
+  const total = useStore((state) => state.totalCost);
+  const discount = useStore((state) => state.discount);
 
   return (
     <>
       <Confirmation>
-        <h2>Below you will find all approved and discarded products</h2>
+        <h2>
+          You saved {discount.toFixed(2)}€ totaling at {total.toFixed(2)}€ !
+        </h2>
       </Confirmation>
     </>
   );

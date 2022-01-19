@@ -6,10 +6,10 @@ export const Confirmation = ({ children }) => {
   return (
     <section>
       {children}
-      Approved products grid:
+      <h3>Approved gifts:</h3>
       <ApprovedProducts />
       <br />
-      Discarded products grid:
+      <h3>Discarded gifts:</h3>
       <DiscardedProducts />
     </section>
   );
