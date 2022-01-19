@@ -11,7 +11,11 @@ const ConfirmationPage = () => {
     <>
       <Confirmation>
         <h2>
-          You saved {discount.toFixed(2)}€ totaling at {total.toFixed(2)}€ !
+          {discount == 0
+            ? `Total price: ${total.toFixed(2)}€`
+            : `You saved ${discount.toFixed(2)}€ totaling at ${total.toFixed(
+                2
+              )}€ !`}
         </h2>
       </Confirmation>
     </>

@@ -21,7 +21,7 @@ export let store = (set, get) => ({
       child.wishlist = wishlist;
     });
 
-    set(() => ({ children: children }));
+    set((state) => ({ children: children }));
   },
   approveGift: (productId, childId) => {
     // Defining selectors
