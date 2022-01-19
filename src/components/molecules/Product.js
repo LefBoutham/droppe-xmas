@@ -2,12 +2,22 @@ import React from "react";
 import { Button } from "../atoms/Button";
 import { ItemContainer } from "../atoms/ItemContainer";
 
-export const Product = (props) => {
+export const Product = ({ gift }) => {
+  const approveGift = () => {
+    console.log("Approved");
+  };
+
   return (
     <ItemContainer className="product-to-approve">
-      <p>Gift name: Gift</p>
-      <p>Gift quantity: 1</p>
-      <Button>Approve</Button>
+      <h2>Gift {gift.productId}</h2>
+      <p>Gift quantity: {gift.quantity}</p>
+      <Button
+        onClick={() => {
+          approveGift();
+        }}
+      >
+        Approve
+      </Button>
       <Button>Discard</Button>
     </ItemContainer>
   );

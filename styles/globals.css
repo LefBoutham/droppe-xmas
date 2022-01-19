@@ -66,6 +66,7 @@ section {
   border: none;
   border-radius: 10px;
   cursor: pointer;
+  margin: 3px;
 }
 nav {
   width: 100%;
@@ -85,4 +86,16 @@ footer {
   border-radius: 15px;
   border: 1px solid var(--main-dark);
   max-width: 400px;
+}
+.wishlists-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  width: 100%;
+}
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  width: 100%;
 }

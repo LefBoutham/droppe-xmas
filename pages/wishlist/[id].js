@@ -1,5 +1,6 @@
 import { useRouter } from "next/router";
 import { useEffect } from "react";
+import { WishlistView } from "../../src/components/templates/WishlistView";
 import { useStore } from "../../src/store";
 
 export default function WishlistPage() {
@@ -9,13 +10,16 @@ export default function WishlistPage() {
   const carts = useStore((state) => state.carts);
 
   useEffect(() => {
+    if (!id) {
+      return;
+    }
     if (carts.length == 0) {
       router.push("/");
     }
-  }, [carts]);
+  }, [carts, id]);
   return (
     <>
-      <p>New wishlist page id: {id}</p>
+      <WishlistView id={id} />
     </>
   );
 }
