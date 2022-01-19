@@ -1,6 +1,18 @@
+import { useRouter } from "next/router";
+import { useEffect } from "react";
 import { Confirmation } from "../src/components/templates/Confirmation";
+import { useStore } from "../src/store";
 
-const confirmation = () => {
+const ConfirmationPage = () => {
+  const router = useRouter();
+  const carts = useStore((state) => state.carts);
+
+  useEffect(() => {
+    if (carts.length == 0) {
+      router.push("/");
+    }
+  }, [carts]);
+
   return (
     <>
       <Confirmation>
@@ -10,4 +22,4 @@ const confirmation = () => {
   );
 };
 
-export default confirmation;
+export default ConfirmationPage;
