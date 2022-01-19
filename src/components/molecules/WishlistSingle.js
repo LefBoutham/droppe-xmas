@@ -6,7 +6,7 @@ export const WishlistSingle = React.forwardRef(
     return (
       <a href={href} ref={ref} onClick={onClick}>
         <ItemContainer className="wishlist-single">
-          <h3>{`${child.name}'s wishlist`}</h3>
+          <h3>{`${child.name}'s wishlist 🎁`}</h3>
           <p>Gifts to approve: {child.wishlist.length}</p>
         </ItemContainer>
       </a>

@@ -15,7 +15,8 @@ export default function Home(props) {
 
   return (
     <Front>
-      <p>Start approving gifts by clicking on a wishlist below!</p>
+      <h1>Droppe-Xmas</h1>
+      <p>Approve or discard gifts by clicking on a wishlist below.</p>
       <p>
         When you're done, confirm your order by clicking{" "}
         <Button
@@ -26,6 +27,7 @@ export default function Home(props) {
           Here
         </Button>
       </p>
+      <h2>Wishlists:</h2>
     </Front>
   );
 }
