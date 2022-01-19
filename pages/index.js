@@ -15,10 +15,12 @@ export default function Home(props) {
 
   return (
     <Front>
-      <h1>Droppe-Xmas</h1>
-      <p>Approve or discard gifts by clicking on a wishlist below.</p>
-      <p>
-        When you're done, confirm your order by clicking{" "}
+      <h1 style={{ fontSize: "38px" }}>Droppe-Xmas</h1>
+      <p style={{ fontSize: "20px", fontWeight: "500" }}>
+        Approve or discard gifts by clicking on a wishlist below.
+      </p>
+      <p style={{ fontSize: "20px", fontWeight: "500" }}>
+        When you're finished, confirm your order by clicking{" "}
         <Button
           onClick={() => {
             confirmOrder();
