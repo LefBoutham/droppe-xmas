@@ -5,9 +5,11 @@ import { useStore } from "../src/store";
 export default function Home(props) {
   let cartData = props.cartData;
   const setCarts = useStore((state) => state.setCarts);
+  const allocateCarts = useStore((state) => state.allocateCarts);
 
   useEffect(() => {
     setCarts(cartData);
+    allocateCarts();
   }, []);
 
   return (
